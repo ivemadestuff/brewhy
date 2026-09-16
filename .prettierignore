@@ -1,0 +1,9 @@
+# folders
+dist/
+node_modules/
+tests/__snapshots__/
+.test-build/
+.husky/_/
+
+# files
+package-lock.json

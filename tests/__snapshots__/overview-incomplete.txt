@@ -1,0 +1,17 @@
+Summary:
+1 Directly installed
+4 Dependencies
+0 Shared dependencies
+3 Unexplained
+
+Installed Formulae:
+alpha (1 Dependency, 1 Exclusive)
+  beta
+
+Unexplained
+  delta
+  epsilon
+  gamma
+
+The available Homebrew data does not explain why these formulae are installed.
+This does not mean they are safe to remove.

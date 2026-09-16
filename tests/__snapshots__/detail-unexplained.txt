@@ -1,0 +1,9 @@
+gamma
+1.0.0
+gamma description
+
+Installed  as a dependency
+Reason     Unexplained
+
+The available Homebrew data does not explain why this formula is installed. This
+does not mean the formula is safe to remove.

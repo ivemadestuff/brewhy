@@ -1,0 +1,16 @@
+Summary:
+1 Directly installed
+4 Dependencies
+0 Shared dependencies
+2 Unexplained
+
+Installed Formulae:
+app (2 Dependencies, 2 Exclusive)
+  mpdecimal, python@3.12
+
+Unexplained
+  old-lib
+  unlinked-tool
+
+The available Homebrew data does not explain why these formulae are installed.
+This does not mean they are safe to remove.

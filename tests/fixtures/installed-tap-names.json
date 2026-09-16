@@ -1,0 +1,88 @@
+{
+  "info": {
+    "formulae": [
+      {
+        "name": "gadget",
+        "full_name": "acme/tap/gadget",
+        "tap": "acme/tap",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "gadget description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "helper",
+        "full_name": "acme/tap/helper",
+        "tap": "acme/tap",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "helper description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "helper",
+        "full_name": "helper",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "helper description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "widget",
+        "full_name": "acme/tap/widget",
+        "tap": "acme/tap",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "widget description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": true,
+            "runtime_dependencies": [
+              {
+                "full_name": "acme/tap/gadget",
+                "version": "1.0.0",
+                "declared_directly": true
+              },
+              {
+                "full_name": "acme/tap/helper",
+                "version": "1.0.0",
+                "declared_directly": true
+              },
+              {
+                "full_name": "helper",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "casks": []
+  },
+  "installed_on_request": ["acme/tap/widget"]
+}

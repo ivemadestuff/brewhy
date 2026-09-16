@@ -1,0 +1,84 @@
+{
+  "info": {
+    "formulae": [
+      {
+        "name": "app-tool",
+        "full_name": "app-tool",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "app-tool description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": true,
+            "runtime_dependencies": [
+              {
+                "full_name": "shared-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "shared-lib",
+        "full_name": "shared-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "shared-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      }
+    ],
+    "casks": [
+      {
+        "token": "ring-a",
+        "full_token": "ring-a",
+        "old_tokens": [],
+        "tap": "homebrew/cask",
+        "name": ["Ring A"],
+        "version": "1.0.0",
+        "installed": "1.0.0",
+        "depends_on": {
+          "cask": ["ring-b"]
+        }
+      },
+      {
+        "token": "ring-b",
+        "full_token": "ring-b",
+        "old_tokens": [],
+        "tap": "homebrew/cask",
+        "name": ["Ring B"],
+        "version": "1.0.0",
+        "installed": "1.0.0",
+        "depends_on": {
+          "cask": ["ring-a"],
+          "formula": "shared-lib"
+        }
+      },
+      {
+        "token": "top-app",
+        "full_token": "top-app",
+        "old_tokens": [],
+        "tap": "homebrew/cask",
+        "name": ["Top App"],
+        "version": "1.0.0",
+        "installed": "1.0.0",
+        "depends_on": {
+          "formula": "shared-lib"
+        }
+      }
+    ]
+  },
+  "installed_on_request": ["app-tool"]
+}

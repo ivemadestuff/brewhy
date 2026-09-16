@@ -1,0 +1,49 @@
+{
+  "info": {
+    "formulae": [
+      {
+        "name": "helper-lib",
+        "full_name": "helper-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "helper-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      }
+    ],
+    "casks": [
+      {
+        "token": "widget-app",
+        "full_token": "acme/tap/widget-app",
+        "tap": "acme/tap",
+        "old_tokens": ["widget"],
+        "name": ["Widget"],
+        "version": "2.0.0",
+        "installed": "2.0.0",
+        "depends_on": {
+          "formula": "helper-lib",
+          "macos": { ">=": ["13"] }
+        }
+      },
+      {
+        "token": "parent-suite",
+        "full_token": "parent-suite",
+        "tap": "homebrew/cask",
+        "name": ["Parent Suite"],
+        "version": "1.0.0",
+        "installed": "1.0.0",
+        "depends_on": {
+          "cask": "widget-app"
+        }
+      }
+    ]
+  },
+  "installed_on_request": []
+}

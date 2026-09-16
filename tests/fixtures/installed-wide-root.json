@@ -1,0 +1,235 @@
+{
+  "info": {
+    "formulae": [
+      {
+        "name": "toolkit",
+        "full_name": "toolkit",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "toolkit description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": true,
+            "runtime_dependencies": [
+              {
+                "full_name": "alpha-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              },
+              {
+                "full_name": "beta-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              },
+              {
+                "full_name": "delta-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              },
+              {
+                "full_name": "epsilon-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              },
+              {
+                "full_name": "eta-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              },
+              {
+                "full_name": "gamma-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              },
+              {
+                "full_name": "iota-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              },
+              {
+                "full_name": "kappa-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              },
+              {
+                "full_name": "theta-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              },
+              {
+                "full_name": "zeta-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "alpha-lib",
+        "full_name": "alpha-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "alpha-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "beta-lib",
+        "full_name": "beta-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "beta-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "delta-lib",
+        "full_name": "delta-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "delta-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "epsilon-lib",
+        "full_name": "epsilon-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "epsilon-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "eta-lib",
+        "full_name": "eta-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "eta-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "gamma-lib",
+        "full_name": "gamma-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "gamma-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "iota-lib",
+        "full_name": "iota-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "iota-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "kappa-lib",
+        "full_name": "kappa-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "kappa-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "theta-lib",
+        "full_name": "theta-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "theta-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "zeta-lib",
+        "full_name": "zeta-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "zeta-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      }
+    ],
+    "casks": []
+  },
+  "installed_on_request": ["toolkit"]
+}

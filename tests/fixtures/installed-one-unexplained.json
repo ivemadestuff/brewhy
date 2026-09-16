@@ -1,0 +1,24 @@
+{
+  "info": {
+    "formulae": [
+      {
+        "name": "orphan",
+        "full_name": "orphan",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "orphan description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      }
+    ],
+    "casks": []
+  },
+  "installed_on_request": []
+}

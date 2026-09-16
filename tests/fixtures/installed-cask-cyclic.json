@@ -1,0 +1,50 @@
+{
+  "info": {
+    "formulae": [
+      {
+        "name": "helper-lib",
+        "full_name": "helper-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "helper-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      }
+    ],
+    "casks": [
+      {
+        "token": "loop-a",
+        "full_token": "loop-a",
+        "old_tokens": [],
+        "tap": "homebrew/cask",
+        "name": ["Loop A"],
+        "version": "1.0.0",
+        "installed": "1.0.0",
+        "depends_on": {
+          "cask": "loop-b"
+        }
+      },
+      {
+        "token": "loop-b",
+        "full_token": "loop-b",
+        "old_tokens": [],
+        "tap": "homebrew/cask",
+        "name": ["Loop B"],
+        "version": "1.0.0",
+        "installed": "1.0.0",
+        "depends_on": {
+          "cask": "loop-a",
+          "formula": "helper-lib"
+        }
+      }
+    ]
+  },
+  "installed_on_request": []
+}

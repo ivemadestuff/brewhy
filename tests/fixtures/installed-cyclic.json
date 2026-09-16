@@ -1,0 +1,74 @@
+{
+  "info": {
+    "formulae": [
+      {
+        "name": "loop-a",
+        "full_name": "loop-a",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "loop-a description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": [
+              {
+                "full_name": "loop-b",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "loop-b",
+        "full_name": "loop-b",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "loop-b description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": [
+              {
+                "full_name": "loop-a",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "root",
+        "full_name": "root",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "root description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": true,
+            "runtime_dependencies": [
+              {
+                "full_name": "loop-a",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "casks": []
+  },
+  "installed_on_request": ["root"]
+}

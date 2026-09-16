@@ -1,0 +1,161 @@
+{
+  "info": {
+    "formulae": [
+      {
+        "name": "a-tool",
+        "full_name": "a-tool",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "a-tool description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": true,
+            "runtime_dependencies": [
+              {
+                "full_name": "common-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              },
+              {
+                "full_name": "readline",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "b-tool",
+        "full_name": "b-tool",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "b-tool description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": true,
+            "runtime_dependencies": [
+              {
+                "full_name": "common-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "c-tool",
+        "full_name": "c-tool",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "c-tool description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": true,
+            "runtime_dependencies": [
+              {
+                "full_name": "common-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "common-lib",
+        "full_name": "common-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "common-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": [
+              {
+                "full_name": "ncurses",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "d-tool",
+        "full_name": "d-tool",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "d-tool description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": true,
+            "runtime_dependencies": [
+              {
+                "full_name": "common-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ncurses",
+        "full_name": "ncurses",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "ncurses description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "readline",
+        "full_name": "readline",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "readline description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": true,
+            "runtime_dependencies": [
+              {
+                "full_name": "ncurses",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "casks": []
+  },
+  "installed_on_request": ["a-tool", "b-tool", "c-tool", "d-tool", "readline"]
+}

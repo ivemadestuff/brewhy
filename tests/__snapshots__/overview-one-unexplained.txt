@@ -1,0 +1,11 @@
+Summary:
+0 Directly installed
+1 Dependency
+0 Shared dependencies
+1 Unexplained
+
+Unexplained
+  orphan
+
+The available Homebrew data does not explain why this formula is installed. This
+does not mean the formula is safe to remove.
