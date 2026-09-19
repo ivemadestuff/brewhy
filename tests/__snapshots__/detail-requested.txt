@@ -1,0 +1,10 @@
+╔══════════════════════╗
+║ readline       1.0.0 ║
+║ readline description ║
+╚══════════════════════╝
+
+Installed                on request
+Brings in                1 formula
+Requires directly        ncurses
+Everything it brings in  ncurses
+Also required by         a-tool

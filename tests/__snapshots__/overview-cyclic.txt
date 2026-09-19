@@ -1,0 +1,8 @@
+Summary:
+1 Directly Installed
+2 Dependencies
+0 Shared Dependencies
+
+Installed Formulae:
+✓ root (2 Dependencies, 2 Exclusive)
+  loop-a, loop-b

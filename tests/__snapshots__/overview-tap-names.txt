@@ -1,0 +1,8 @@
+Summary:
+1 Directly Installed
+3 Dependencies
+0 Shared Dependencies
+
+Installed Formulae:
+✓ widget (3 Dependencies, 3 Exclusive)
+  acme/tap/helper, gadget, helper

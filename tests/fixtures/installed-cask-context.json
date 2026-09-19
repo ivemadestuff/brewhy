@@ -1,0 +1,160 @@
+{
+  "info": {
+    "formulae": [
+      {
+        "name": "gvproxy",
+        "full_name": "gvproxy",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "gvproxy description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "helper-lib",
+        "full_name": "helper-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "helper-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "jq",
+        "full_name": "jq",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "jq description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": true,
+            "runtime_dependencies": [
+              {
+                "full_name": "oniguruma",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "oniguruma",
+        "full_name": "oniguruma",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "oniguruma description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "podman",
+        "full_name": "podman",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "podman description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": [
+              {
+                "full_name": "gvproxy",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "casks": [
+      {
+        "token": "child-app",
+        "full_token": "child-app",
+        "old_tokens": [],
+        "tap": "homebrew/cask",
+        "name": ["Child App"],
+        "version": "1.0.0",
+        "installed": "1.0.0",
+        "depends_on": {
+          "macos": {
+            ">=": ["12"]
+          },
+          "formula": "helper-lib"
+        }
+      },
+      {
+        "token": "parent-app",
+        "full_token": "parent-app",
+        "old_tokens": [],
+        "tap": "homebrew/cask",
+        "name": ["Parent App"],
+        "version": "1.0.0",
+        "installed": "1.0.0",
+        "depends_on": {
+          "macos": {
+            ">=": ["12"]
+          },
+          "cask": ["child-app"]
+        }
+      },
+      {
+        "token": "podman-desktop",
+        "full_token": "podman-desktop",
+        "old_tokens": [],
+        "tap": "homebrew/cask",
+        "name": ["Podman Desktop"],
+        "version": "1.0.0",
+        "installed": "1.0.0",
+        "depends_on": {
+          "macos": {
+            ">=": ["12"]
+          },
+          "formula": "podman"
+        }
+      },
+      {
+        "token": "standalone-app",
+        "full_token": "standalone-app",
+        "old_tokens": [],
+        "tap": "homebrew/cask",
+        "name": ["Standalone App"],
+        "version": "1.0.0",
+        "installed": "1.0.0",
+        "depends_on": {
+          "macos": {
+            ">=": ["12"]
+          }
+        }
+      }
+    ]
+  },
+  "installed_on_request": ["jq"]
+}

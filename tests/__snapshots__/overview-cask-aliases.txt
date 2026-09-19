@@ -1,0 +1,9 @@
+Summary:
+0 Directly Installed
+2 Casks
+1 Dependency
+0 Shared Dependencies
+
+Installed Casks:
+✓ parent-suite (2 Packages, 2 Exclusive)
+  helper-lib, widget-app (cask)

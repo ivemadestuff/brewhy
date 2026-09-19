@@ -1,0 +1,10 @@
+╔═══════════════════╗
+║ gamma       1.0.0 ║
+║ gamma description ║
+╚═══════════════════╝
+
+Installed  as a dependency
+Reason     Unexplained
+
+No requested formula root or installed cask source reaches this formula in the
+available metadata. This does not mean the formula is safe to remove.

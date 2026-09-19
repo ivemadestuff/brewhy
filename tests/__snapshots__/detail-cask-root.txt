@@ -1,0 +1,10 @@
+╔═══════════════════════╗
+║ podman-desktop  1.0.0 ║
+║ Podman Desktop        ║
+╚═══════════════════════╝
+
+Installed                    as a cask
+Brings in                    2 formulae, 2 only through podman-desktop
+Requires directly            podman
+Everything it brings in      gvproxy, podman
+Only through podman-desktop  gvproxy, podman

@@ -1,0 +1,9 @@
+╔══════════════════╗
+║ child-app  1.0.0 ║
+║ Child App        ║
+╚══════════════════╝
+
+Installed             as a cask
+Requires directly     helper-lib
+Directly required by  parent-app (cask)
+Installed because of  parent-app (cask)

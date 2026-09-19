@@ -1,0 +1,117 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  test:
+    name: test (node ${{ matrix.node }})
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ["20", "22", "24"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+
+      - run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+  release:
+    name: GitHub Release
+    needs: [test, smoke]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: github-release
+      cancel-in-progress: false
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HUSKY: "0"
+
+  smoke:
+    name: Homebrew smoke test
+    runs-on: macos-latest
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: "1"
+      HOMEBREW_NO_ANALYTICS: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Check Homebrew is available
+        run: brew --version
+
+      - name: Run against the runner's Homebrew installation
+        run: |
+          set -euo pipefail
+          node dist/cli.js --version
+          node dist/cli.js --help > /dev/null
+          overview="$RUNNER_TEMP/brewhy-overview.txt"
+          node dist/cli.js > "$overview"
+          grep -q '^Summary:' "$overview"
+          roots=$(grep -c '^✓ ' "$overview" || true)
+          echo "brewhy listed $roots reason sources"
+          if [ "$roots" -gt 0 ]; then
+            grep -qE '^Installed (Formulae|Casks):' "$overview"
+          fi
+          formula=$(awk '
+            /^Installed Formulae:/ { inside = 1; next }
+            /^Installed Casks:/    { inside = 0 }
+            inside && /^✓ / { sub(/^✓ /, ""); sub(/ \(.*$/, ""); print; exit }
+          ' "$overview")
+          if [ -n "$formula" ]; then
+            node dist/cli.js --formula "$formula" | grep -qF -- "$formula"
+            echo "brewhy explained $formula"
+          fi

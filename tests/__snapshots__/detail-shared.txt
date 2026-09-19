@@ -1,0 +1,10 @@
+╔═══════════════════════╗
+║ openssl@3       1.0.0 ║
+║ openssl@3 description ║
+╚═══════════════════════╝
+
+Installed             as a dependency
+Explained by          2 reason sources
+Requires directly     ca-certificates
+Directly required by  node, wget
+Installed because of  node, wget

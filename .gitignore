@@ -1,0 +1,7 @@
+# folders
+node_modules
+dist
+.test-build
+
+# files
+.DS_Store

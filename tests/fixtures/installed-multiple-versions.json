@@ -1,0 +1,116 @@
+{
+  "info": {
+    "formulae": [
+      {
+        "name": "app",
+        "full_name": "app",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "app description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": true,
+            "runtime_dependencies": [
+              {
+                "full_name": "python@3.12",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "mpdecimal",
+        "full_name": "mpdecimal",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "mpdecimal description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "old-lib",
+        "full_name": "old-lib",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "old-lib description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      },
+      {
+        "name": "python@3.12",
+        "full_name": "python@3.12",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "python@3.12 description",
+        "installed": [
+          {
+            "version": "3.12.1",
+            "installed_on_request": false,
+            "runtime_dependencies": [
+              {
+                "full_name": "old-lib",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          },
+          {
+            "version": "3.12.2",
+            "installed_on_request": false,
+            "runtime_dependencies": [
+              {
+                "full_name": "mpdecimal",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ],
+        "linked_keg": "3.12.2"
+      },
+      {
+        "name": "unlinked-tool",
+        "full_name": "unlinked-tool",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "unlinked-tool description",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          },
+          {
+            "version": "2.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ],
+        "linked_keg": null
+      }
+    ],
+    "casks": []
+  },
+  "installed_on_request": ["app"]
+}

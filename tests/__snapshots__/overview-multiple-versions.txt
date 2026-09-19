@@ -1,0 +1,16 @@
+Summary:
+1 Directly Installed
+4 Dependencies
+0 Shared Dependencies
+2 Unexplained
+
+Installed Formulae:
+✓ app (2 Dependencies, 2 Exclusive)
+  mpdecimal, python@3.12
+
+Unexplained
+  old-lib
+  unlinked-tool
+
+No requested formula root or installed cask source reaches these formulae in the
+available metadata. This does not mean they are safe to remove.

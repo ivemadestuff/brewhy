@@ -1,0 +1,11 @@
+Summary:
+0 Directly Installed
+1 Dependency
+0 Shared Dependencies
+1 Unexplained
+
+Unexplained
+  orphan
+
+No requested formula root or installed cask source reaches this formula in the
+available metadata. This does not mean the formula is safe to remove.

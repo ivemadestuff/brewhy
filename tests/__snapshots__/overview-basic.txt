@@ -1,0 +1,12 @@
+Summary:
+3 Directly Installed
+6 Dependencies
+2 Shared Dependencies
+
+Installed Formulae:
+✓ bat (2 Dependencies, 2 Exclusive)
+  libyaml, oniguruma
+✓ node (4 Dependencies, 2 Exclusive)
+  ca-certificates, icu4c, libuv, openssl@3
+✓ wget (2 Dependencies)
+  ca-certificates, openssl@3

@@ -1,0 +1,9 @@
+Summary:
+1 Directly Installed
+10 Dependencies
+0 Shared Dependencies
+
+Installed Formulae:
+✓ toolkit (10 Dependencies, 10 Exclusive)
+  alpha-lib, beta-lib, delta-lib, epsilon-lib, eta-lib, gamma-lib, iota-lib,
+  kappa-lib, theta-lib, zeta-lib

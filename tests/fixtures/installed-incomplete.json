@@ -1,0 +1,97 @@
+{
+  "info": {
+    "formulae": [
+      {
+        "name": "alpha",
+        "full_name": "alpha",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "alpha description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": true,
+            "runtime_dependencies": [
+              {
+                "full_name": "beta",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "beta",
+        "full_name": "beta",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "beta description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false
+          }
+        ]
+      },
+      {
+        "name": "delta",
+        "full_name": "delta",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "delta description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": [
+              {
+                "version": "1.0.0"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "epsilon",
+        "full_name": "epsilon",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "epsilon description",
+        "linked_keg": "1.0.0",
+        "installed": []
+      },
+      {
+        "name": "gamma",
+        "full_name": "gamma",
+        "tap": "homebrew/core",
+        "aliases": [],
+        "oldnames": [],
+        "desc": "gamma description",
+        "linked_keg": "1.0.0",
+        "installed": [
+          {
+            "version": "1.0.0",
+            "installed_on_request": false,
+            "runtime_dependencies": [
+              {
+                "full_name": "not-installed-thing",
+                "version": "1.0.0",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "casks": []
+  },
+  "installed_on_request": ["alpha"]
+}

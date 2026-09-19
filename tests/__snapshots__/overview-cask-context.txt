@@ -1,0 +1,16 @@
+Summary:
+1 Directly Installed
+4 Casks
+4 Dependencies
+0 Shared Dependencies
+
+Installed Formulae:
+✓ jq (1 Dependency, 1 Exclusive)
+  oniguruma
+
+Installed Casks:
+✓ parent-app (2 Packages, 2 Exclusive)
+  child-app (cask), helper-lib
+✓ podman-desktop (2 Dependencies, 2 Exclusive)
+  gvproxy, podman
+✓ standalone-app

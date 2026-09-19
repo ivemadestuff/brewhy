@@ -1,0 +1,9 @@
+╔════════════════════╗
+║ podman       1.0.0 ║
+║ podman description ║
+╚════════════════════╝
+
+Installed             as a dependency
+Requires directly     gvproxy
+Directly required by  podman-desktop (cask)
+Installed because of  podman-desktop (cask)

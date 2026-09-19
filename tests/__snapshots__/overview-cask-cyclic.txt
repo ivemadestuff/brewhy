@@ -1,0 +1,11 @@
+Summary:
+0 Directly Installed
+2 Casks
+1 Dependency
+1 Shared Dependency
+
+Installed Casks:
+✓ loop-a (2 Packages, 1 Exclusive)
+  helper-lib, loop-b (cask)
+✓ loop-b (2 Packages, 1 Exclusive)
+  helper-lib, loop-a (cask)

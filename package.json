@@ -1,0 +1,116 @@
+{
+  "name": "brewhy",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A read-only CLI that explains why each formula is installed.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivemadestuff/brewhy.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "build:test": "rm -rf .test-build && tsc -p tsconfig.test.json",
+    "test": "npm run build:test && node --test .test-build/tests/*.test.js",
+    "test:update": "npm run build:test && UPDATE_SNAPSHOTS=1 node --test .test-build/tests/*.test.js",
+    "typecheck": "tsc -p tsconfig.test.json --noEmit",
+    "lint": "eslint .",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "prepare": "husky",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "@eslint/js": "^9.39.5",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^13.1.5",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "@types/node": "^22.10.0",
+    "conventional-changelog-conventionalcommits": "^9.3.1",
+    "eslint": "^9.39.5",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.9.8",
+    "semantic-release": "^25.0.9",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.70.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,mjs,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": "prettier --write"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "trailingComma": "all",
+    "arrowParens": "always",
+    "tabWidth": 2,
+    "useTabs": false,
+    "printWidth": 100,
+    "proseWrap": "never",
+    "bracketSpacing": true,
+    "semi": true,
+    "plugins": [
+      "@trivago/prettier-plugin-sort-imports"
+    ],
+    "importOrder": [
+      "^node:",
+      "<THIRD_PARTY_MODULES>",
+      "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "importOrderSideEffects": false
+  },
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "tagFormat": "v${version}",
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits"
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits"
+        }
+      ],
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "package-lock.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]"
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  }
+}

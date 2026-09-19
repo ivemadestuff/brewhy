@@ -1,0 +1,16 @@
+Summary:
+5 Directly Installed
+2 Dependencies
+2 Shared Dependencies
+
+Installed Formulae:
+✓ a-tool (3 Dependencies, 1 Exclusive)
+  common-lib, ncurses, readline
+✓ b-tool (2 Dependencies)
+  common-lib, ncurses
+✓ c-tool (2 Dependencies)
+  common-lib, ncurses
+✓ d-tool (2 Dependencies)
+  common-lib, ncurses
+✓ readline (1 Dependency)
+  ncurses

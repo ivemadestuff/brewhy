@@ -1,0 +1,17 @@
+Summary:
+1 Directly Installed
+4 Dependencies
+0 Shared Dependencies
+3 Unexplained
+
+Installed Formulae:
+✓ alpha (1 Dependency, 1 Exclusive)
+  beta
+
+Unexplained
+  delta
+  epsilon
+  gamma
+
+No requested formula root or installed cask source reaches these formulae in the
+available metadata. This does not mean they are safe to remove.
