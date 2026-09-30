@@ -42,9 +42,10 @@ function packageJSON(analysis: Analysis, facts: ExplainedPackage) {
     immediateDependents: facts.immediateDependents.map((source) => source.ID),
     requestedFormulaRoots: facts.requestedFormulaRoots.map((source) => source.ID),
     caskReasonSources: facts.caskReasonSources.map((source) => source.ID),
-    reasonPaths: sources.map((source) => ({
-      source: source.ID,
-      path: reconstructPath(analysis.reachability.bySource.get(source.ID)!, node.ID),
-    })),
+    reasonPaths: sources.flatMap((source) => {
+      const predecessor = analysis.directReachability.bySource.get(source.ID);
+      const path = predecessor ? reconstructPath(predecessor, node.ID) : null;
+      return path === null ? [] : [{ source: source.ID, path }];
+    }),
   };
 }

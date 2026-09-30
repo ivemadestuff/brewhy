@@ -1,7 +1,7 @@
 import type { DependencyGraph } from "./graph.js";
 
 export function shortestPathsFrom(
-  graph: DependencyGraph,
+  graph: Pick<DependencyGraph, "edges">,
   sourceID: string,
 ): Map<string, string | null> {
   const predecessor = new Map<string, string | null>();
@@ -41,7 +41,10 @@ export interface ReachabilityIndex {
   sourcesByNode: Map<string, string[]>;
 }
 
-export function buildReachability(graph: DependencyGraph, sourceIDs: string[]): ReachabilityIndex {
+export function buildReachability(
+  graph: Pick<DependencyGraph, "edges">,
+  sourceIDs: string[],
+): ReachabilityIndex {
   const index: ReachabilityIndex = {
     bySource: new Map(),
     sourcesByNode: new Map(),
@@ -52,7 +55,7 @@ export function buildReachability(graph: DependencyGraph, sourceIDs: string[]): 
 
 export function addReachability(
   index: ReachabilityIndex,
-  graph: DependencyGraph,
+  graph: Pick<DependencyGraph, "edges">,
   sourceIDs: string[],
 ): void {
   for (const sourceID of sourceIDs) {

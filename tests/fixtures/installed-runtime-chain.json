@@ -1,0 +1,55 @@
+{
+  "info": {
+    "formulae": [
+      {
+        "name": "opencode",
+        "full_name": "opencode",
+        "installed": [
+          {
+            "version": "1.18.30_2",
+            "installed_on_request": true,
+            "runtime_dependencies": [
+              {
+                "full_name": "pcre2",
+                "declared_directly": false
+              },
+              {
+                "full_name": "ripgrep",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ripgrep",
+        "full_name": "ripgrep",
+        "installed": [
+          {
+            "version": "15.2.0",
+            "installed_on_request": false,
+            "runtime_dependencies": [
+              {
+                "full_name": "pcre2",
+                "declared_directly": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "pcre2",
+        "full_name": "pcre2",
+        "installed": [
+          {
+            "version": "10.48",
+            "installed_on_request": false,
+            "runtime_dependencies": []
+          }
+        ]
+      }
+    ],
+    "casks": []
+  },
+  "installed_on_request": ["opencode"]
+}

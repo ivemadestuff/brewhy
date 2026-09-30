@@ -59,6 +59,7 @@ export interface Analysis {
   inventory: Inventory;
   graph: DependencyGraph;
   reachability: ReachabilityIndex;
+  directReachability: ReachabilityIndex;
   packages: PackageFacts[];
   casks: CaskFacts[];
   byID: Map<string, PackageFacts>;
