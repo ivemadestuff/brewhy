@@ -9,6 +9,7 @@ Usage:
   brewhy --cask <name>     Explain a cask
 
 Options:
+  --json                   Output JSON
   --show-casks             Include the cask list
   --help                   Show help
   --version                Show version

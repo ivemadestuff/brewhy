@@ -8,6 +8,7 @@ import { resolvePackage } from "./lookup.js";
 import { renderBanner } from "./render/banner.js";
 import { renderDetail } from "./render/detail.js";
 import { helpText } from "./render/help.js";
+import { renderJSON } from "./render/json.js";
 import { renderOverview } from "./render/overview.js";
 
 const MAX_PRINTED_WARNINGS = 20;
@@ -65,6 +66,13 @@ async function execute(argv: string[], deps: RunDependencies): Promise<RunResult
   const analysis = analyze(inventory, graph);
 
   const detail = parsed.name === null ? null : resolvePackage(analysis, parsed.name, parsed.kind);
+  if (parsed.json) {
+    return {
+      stdout: renderJSON(analysis, detail),
+      stderr: formatWarnings(analysis.warnings),
+      exitCode: EXIT_OK,
+    };
+  }
   const textOptions = { width: deps.width, isTTY: deps.isTTY };
 
   const lines =

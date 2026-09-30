@@ -8,6 +8,7 @@ export interface ParsedArgs {
   isCaskListHidden: boolean;
   help: boolean;
   version: boolean;
+  json: boolean;
 }
 
 export function parseArgs(argv: string[]): ParsedArgs {
@@ -17,6 +18,7 @@ export function parseArgs(argv: string[]): ParsedArgs {
     isCaskListHidden: true,
     help: false,
     version: false,
+    json: false,
   };
 
   const positionals: string[] = [];
@@ -28,6 +30,9 @@ export function parseArgs(argv: string[]): ParsedArgs {
       continue;
     }
     switch (argument) {
+      case "--json":
+        parsed.json = true;
+        break;
       case "--":
         onlyPositionals = true;
         break;

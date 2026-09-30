@@ -53,6 +53,16 @@ async function runCli(
 }
 
 describe("cli entry point", () => {
+  it("writes parseable JSON through the real process", async (context) => {
+    const brew = stubBrew(context, "installed-basic");
+    const { stdout, stderr, code } = await runCli(["--json", "node"], brew);
+    assert.equal(code, 0);
+    assert.equal(stderr, "");
+    const data = JSON.parse(stdout) as { schemaVersion: number; package: { ID: string } };
+    assert.equal(data.schemaVersion, 1);
+    assert.equal(data.package.ID, "formula:node");
+    assert.doesNotMatch(stdout, /\x1b/);
+  });
   it("reports the version from the package.json beside the built file", async () => {
     const expected = (JSON.parse(readFileSync(PACKAGE_JSON, "utf8")) as { version: string })
       .version;
