@@ -39,25 +39,42 @@ export function analyze(inventory: Inventory, graph: DependencyGraph): Analysis 
   addReachability(reachability, graph, unreachedCasks);
   const caskSources = [...graph.topLevelCaskIDs, ...unreachedCasks];
 
-  const context: FactsContext = { graph, labels, reachability };
+  const directReachability = buildReachability({ edges: graph.directEdges }, [
+    ...graph.requestedRootIDs,
+    ...caskSources,
+  ]);
+  const context: FactsContext = { graph, labels, reachability, directReachability };
   const packages = [...inventory.formulae.values()]
     .map((node) => formulaFacts(node, context))
     .sort((a, b) => compareLabels(a.label, b.label));
   const casks = [...inventory.casks.values()]
     .map((node) => caskFacts(node, context))
     .sort((a, b) => compareLabels(a.label, b.label));
+  const warnings = [...inventory.warnings];
+  if (
+    [...packages, ...casks].some(
+      (facts) =>
+        facts.reasonPaths.length <
+        facts.requestedFormulaRoots.length + facts.caskReasonSources.length,
+    )
+  ) {
+    warnings.push(
+      "Some dependency paths are unknown because Homebrew's direct dependency metadata is incomplete.",
+    );
+  }
 
   const withoutRoots = {
     inventory,
     graph,
     reachability,
+    directReachability,
     packages,
     casks,
     byID: new Map(packages.map((facts) => [facts.node.ID, facts])),
     caskByID: new Map(casks.map((facts) => [facts.node.ID, facts])),
     labels,
     summary: summarize(packages),
-    warnings: inventory.warnings,
+    warnings,
   };
   return { ...withoutRoots, roots: summarizeRoots(withoutRoots, caskSources) };
 }
@@ -66,6 +83,7 @@ interface FactsContext {
   graph: DependencyGraph;
   labels: Map<string, string>;
   reachability: ReachabilityIndex;
+  directReachability: ReachabilityIndex;
 }
 
 function packageRelations(nodeID: string, context: FactsContext): PackageRelations {
@@ -86,7 +104,7 @@ function packageRelations(nodeID: string, context: FactsContext): PackageRelatio
   sortSources(requestedFormulaRoots);
   sortSources(caskReasonSources);
 
-  const dependents = (graph.reverse.get(nodeID) ?? []).map(toSource);
+  const dependents = (graph.directReverse.get(nodeID) ?? []).map(toSource);
   sortSources(dependents);
   const sources = [...requestedFormulaRoots, ...caskReasonSources];
   return {
@@ -120,7 +138,7 @@ function caskFacts(node: CaskNode, context: FactsContext): CaskFacts {
 function pathsTo(nodeID: string, sources: ReasonSource[], context: FactsContext): ReasonPath[] {
   const paths: ReasonPath[] = [];
   for (const source of sources) {
-    const predecessor = context.reachability.bySource.get(source.ID);
+    const predecessor = context.directReachability.bySource.get(source.ID);
     if (!predecessor) continue;
     const path = reconstructPath(predecessor, nodeID);
     if (!path) continue;
